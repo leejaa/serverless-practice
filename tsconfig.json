@@ -24,6 +24,7 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
     "rootDir": "./"
@@ -32,7 +33,7 @@
     "node_modules"
   ],
   "include": [
-    "./*.tsx",
-    "./*.ts"
+    "./**/*.tsx",
+    "./**/*.ts"
   ]
 }
