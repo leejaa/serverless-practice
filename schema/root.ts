@@ -14,7 +14,7 @@ export const rootTypeDefs = gql`
 export const rootResolvers = {
   Query: {
     hello: () => "hello",
-    hello2: () => "hello 2",
+    hello2: () => "hello2",
   },
   Mutation: {
     hello3: () => "hello3",
