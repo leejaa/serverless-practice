@@ -2,8 +2,8 @@
 
 import { ApolloServer } from "apollo-server-lambda";
 import 'reflect-metadata';
-import { authorTypeDefs } from "schema/author";
-import { rootTypeDefs, rootResolvers } from "schema/root";
+import { authorTypeDefs } from "./schema/author";
+import { rootTypeDefs, rootResolvers } from "./schema/root";
 
 // Construct a schema, using GraphQL schema language
 // const typeDefs = gql`
