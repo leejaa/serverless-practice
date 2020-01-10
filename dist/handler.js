@@ -11,12 +11,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const apollo_server_lambda_1 = require("apollo-server-lambda");
 require("reflect-metadata");
-const author_1 = require("schema/author");
-const root_1 = require("schema/root");
+const type_1 = require("./schema/type");
+const root_1 = require("./schema/root");
 (() => __awaiter(void 0, void 0, void 0, function* () {
     const apolloServer = new apollo_server_lambda_1.ApolloServer({
-        typeDefs: [author_1.authorTypeDefs, root_1.rootTypeDefs],
-        resolvers: [root_1.rootResolvers]
+        typeDefs: [type_1.typeDefs, root_1.queryMutationDefs],
+        resolvers: [root_1.resolvers]
     });
     module.exports.graphqlHandler = apolloServer.createHandler();
 }))();

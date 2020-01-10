@@ -1,23 +1,42 @@
 import { gql } from "apollo-server-lambda";
+// import { Photon } from "@prisma/photon";
+
+// const photon = new Photon();
 
 // root.js
-export const rootTypeDefs = gql`
+export const queryMutationDefs = gql`
   type Query {
-    hello: String,
+    hello1: String,
     hello2: String,
   },
   type Mutation {
-    hello3: String,
+    insertUser: String,
     hello4: String,
   },
 `;
-export const rootResolvers = {
+export const resolvers = {
   Query: {
-    hello: () => "hello",
+    hello1: () => "hello1 ",
     hello2: () => "hello2 ",
   },
   Mutation: {
-    hello3: () => "hello3",
+    insertUser: async () => {
+        const random = Math.floor( Math.random() * 100 );
+        // await photon.users.create({
+        //     data: {
+        //         email: `${random}@naver.com`,
+        //         name: `${random}`,
+        //         posts: {
+        //             create: {
+        //                 title: 'jahun-post',
+        //                 content: 'jahun-post-content',
+        //                 published: true
+        //             }
+        //         }
+        //     }
+        // });
+        return `${random}`;
+    },
     hello4: () => "hello4",
   }
 };

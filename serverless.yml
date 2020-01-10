@@ -27,10 +27,13 @@ provider:
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
-
-# serverless optimization
+  # - serverless-plugin-optimize
 package:
   individually: true
+  excludeDevDependencies: true
+  # exclude:
+  #   - node_modules/**
+  #   - venv/**
 
 custom:
   webpack: # serverless-webpack 관련 설정
