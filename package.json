@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-lambda": "^2.9.15",
+    "apollo-server-lambda": "^2.14.2",
     "prisma2": "^2.0.0-preview019",
     "reflect-metadata": "^0.1.13",
     "serverless-webpack": "^5.3.1",
